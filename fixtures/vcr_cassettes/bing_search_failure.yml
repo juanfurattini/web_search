@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.cognitive.microsoft.com/bing/v7.0/search?count=1&offset=0&q=Bing%2520Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Ocp-Apim-Subscription-Key:
+      - invalid_value
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.cognitive.microsoft.com
+  response:
+    status:
+      code: 401
+      message: PermissionDenied
+    headers:
+      Content-Length:
+      - '224'
+      Content-Type:
+      - application/json
+      Apim-Request-Id:
+      - bd5cae98-8ff9-42ca-9447-91b922beaa0b
+      Date:
+      - Tue, 21 Jun 2022 05:51:39 GMT
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":"401","message":"Access denied due to invalid subscription
+        key or wrong API endpoint. Make sure to provide a valid key for an active
+        subscription and use a correct regional API endpoint for your resource."}}'
+  recorded_at: Tue, 21 Jun 2022 05:51:39 GMT
+recorded_with: VCR 6.1.0

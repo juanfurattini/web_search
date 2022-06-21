@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.cognitive.microsoft.com/bing/v7.0/search?count=1&offset=0&q=Bing%2520Search
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Ocp-Apim-Subscription-Key:
+      - "<BING_SEARCH_API_KEY>"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.cognitive.microsoft.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Accept-Ch:
+      - Sec-CH-UA-Arch,Sec-CH-UA-Bitness,Sec-CH-UA-Full-Version,Sec-CH-UA-Mobile,Sec-CH-UA-Model,Sec-CH-UA-Platform,Sec-CH-UA-Platform-Version
+      Apim-Request-Id:
+      - b5a50e5d-49fb-4fa7-91af-effadf33a8ab
+      Bingapis-Market:
+      - en-US
+      Bingapis-Sessionid:
+      - 526BDDEB46FA46119C18F66C5272F65D
+      Bingapis-Traceid:
+      - 7E338A3491654FEEBBA8C1076DF946A5
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - application/json; charset=utf-8
+      Csp-Billing-Usage:
+      - CognitiveServices.BingSearchV7.Transaction=1
+      Date:
+      - Tue, 21 Jun 2022 06:02:56 GMT
+      Expires:
+      - Tue, 21 Jun 2022 06:01:56 GMT
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Server:
+      - ESF
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - CONFIG_NOCACHE
+      X-Content-Type-Options:
+      - nosniff
+      X-Msapi-Userstate:
+      - 199f
+      X-Msedge-Clientid:
+      - 31BDEFC52DAB63B030D3FE0F2CE46298
+      X-Msedge-Ref:
+      - 'Ref A: 7E338A3491654FEEBBA8C1076DF946A5 Ref B: BLUEDGE1206 Ref C: 2022-06-21T06:02:56Z'
+      Content-Length:
+      - '127'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"_type": "SearchResponse", "queryContext": {"_type": "QueryContext",
+        "originalQuery": "Bing%20Search"}, "rankingResponse": {"_type": "Ranking\/RankingResponse"}}'
+  recorded_at: Tue, 21 Jun 2022 06:02:56 GMT
+recorded_with: VCR 6.1.0

@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/customsearch/v1?cx=<GOOGLE_PROGRAMMABLE_SEARCH_ENGINE_ID>&key=invalid_value&num=1&q=Google%2520Search&start=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.googleapis.com
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 21 Jun 2022 04:52:59 GMT
+      Server:
+      - ESF
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "error": {
+            "code": 400,
+            "message": "API key not valid. Please pass a valid API key.",
+            "errors": [
+              {
+                "message": "API key not valid. Please pass a valid API key.",
+                "domain": "global",
+                "reason": "badRequest"
+              }
+            ],
+            "status": "INVALID_ARGUMENT",
+            "details": [
+              {
+                "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+                "reason": "API_KEY_INVALID",
+                "domain": "googleapis.com",
+                "metadata": {
+                  "service": "customsearch.googleapis.com"
+                }
+              }
+            ]
+          }
+        }
+  recorded_at: Tue, 21 Jun 2022 04:52:59 GMT
+recorded_with: VCR 6.1.0
